@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+        }
+        
+        h1{
+            margin: auto;
+            text-align: center;
+            margin-top: 100px;
+            background-color: red;
+            color: white;
+    
+        }
+        main{
+            min-height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+            
+        }
+        .box{
+            width: 150px;
+            height: 100px;
+            border: 2px solid black;
+            background-color: #ececec;
+            border-radius: 20px;
+            box-shadow: 10px 10px 20px 10px black;
+        }
+
+        #Hours{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+        #Minutes{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+        #Seconds{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+
+        }
+        #Milisec{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1> Digital Clock</h1>
+    <header></header>
+    <main>
+        <div class="box">
+            <div id="Hours">
+            </div>
+            <h1>Hours</h1>
+        </div>
+        <div class="box">
+            <div id="Minutes"></div>
+            <h1>Minutes</h1>
+        </div>
+        <div class="box">
+            <div id="Seconds"></div>
+            <h1>Seconds</h1>
+        </div>
+        <div class="box">
+            <div id="Milisec"></div>
+            <h1>Milisecond</h1>
+        </div>
+    </main>
+    <script>
+        var hoursElement = document.getElementById("Hours");
+        var hoursMin = document.getElementById("Minutes");
+        var hoursSec = document.getElementById("Seconds");
+        var hoursMili = document.getElementById("Milisec")
+
+
+
+        setInterval(
+            function(){
+                var currentTime = new Date();
+                hoursElement.innerHTML = currentTime.getHours()
+            }
+        )
+        setInterval(
+            function(){
+                var currentTime = new Date();
+                hoursMin.innerHTML = currentTime.getMinutes()
+            }
+        )
+        setInterval(
+            function(){
+                var currentTime = new Date();
+                hoursSec.innerHTML = currentTime.getSeconds()
+            }
+        )
+        setInterval(
+            function Milisecond(){
+            var currentTime = new Date();
+            hoursMili.innerHTML = currentTime.getMilliseconds()
+        }
+        )
+    
+
+    </script>
+</body>
+</html>
